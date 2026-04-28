@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Audio - Premium Music Experience</title>
+    <meta name="description" content="Experience music in a whole new way with Stellar Audio - a sleek, modern music player.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player-card" id="player">
+            <!-- Header/Art -->
+            <div class="album-art">
+                <div class="art-container">
+                    <img id="track-art" src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=400&h=400&fit=crop" alt="Album Art">
+                </div>
+            </div>
+
+            <!-- Song Info -->
+            <div class="song-info">
+                <h1 id="track-name">Loading...</h1>
+                <p id="track-artist">Select a song</p>
+            </div>
+
+            <!-- Progress -->
+            <div class="playback-container">
+                <div class="progress-area" id="progress-area">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="time-info">
+                    <span id="current-time">00:00</span>
+                    <span id="total-duration">00:00</span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="control-btn" id="prev" title="Previous">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                </button>
+                <button class="control-btn play-pause" id="play-pause" title="Play/Pause">
+                    <svg id="play-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <svg id="pause-icon" style="display: none;" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                </button>
+                <button class="control-btn" id="next" title="Next">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                </button>
+            </div>
+
+            <!-- Volume -->
+            <div class="volume-container">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="var(--text-secondary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="70">
+            </div>
+
+            <!-- Playlist Toggle/Section -->
+            <div class="playlist-container" id="playlist">
+                <!-- Playlist items will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Decoration -->
+    <div style="position: fixed; top: -100px; left: -100px; width: 400px; height: 400px; background: var(--accent-color); opacity: 0.1; filter: blur(100px); border-radius: 50%;"></div>
+    <div style="position: fixed; bottom: -100px; right: -100px; width: 400px; height: 400px; background: #3b82f6; opacity: 0.1; filter: blur(100px); border-radius: 50%;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
