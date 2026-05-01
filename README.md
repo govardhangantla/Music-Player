@@ -2,6 +2,8 @@
 
 A sleek, modern, and fully functional music player web application built with HTML, CSS, and JavaScript.
 
+![Stellar Audio Web Interface](preview.png)
+
 ## Features
 
 - **Modern User Interface**: Features a premium, glassmorphism-inspired design with smooth animations.
